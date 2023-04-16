@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Element to Clipboard",
+  "version": "1.0",
+  "description": "Right-click to copy an element's content to the clipboard.",
+  "permissions": ["contextMenus", "activeTab", "clipboardWrite"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "512": "icon.png"
+  }
+}
